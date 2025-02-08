@@ -1,0 +1,42 @@
+#!bin/bash
+
+basics="git xinput i3 flatpak snap snapd rofi flameshot "
+apps="zoom discord"
+flatpak="app.zen_browser.zen "
+snap="nvim"
+
+#python3
+py="pipx pip virtualenv"
+
+#C/C++
+comp="gcc g++ clang gdb valgrind"
+
+#Java
+jav="default-jdk default-jre"
+
+echo "check for updates"
+sudo apt-get update
+sudo apt-get upgrade
+
+echo "installing your basic packages"
+sudo apt-get install $basics 
+sudo apt-get install $apps 
+sudo snap install snapd
+sudo snap install nvim --classic
+
+echo "installing C/C++..."
+sudo apt-get install $comp
+
+
+echo "installing python"
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install $py
+
+sudo flatpak install flathub $flatpak
+
+echo "final check for updates"
+sudo apt-get update
+sudo apt-get upgrade
+

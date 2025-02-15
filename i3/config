@@ -43,6 +43,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+
 #Screenshot
 bindsym Print exec flameshot gui
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -57,6 +58,9 @@ bindsym $mod+Return exec alacritty
 #bindsym $mod+l exec i3lock --color 36343F
 # kill focused window
 bindsym $mod+shift+q kill
+
+#start wifi menu
+bindsym $mod+shift+w exec /home/marwan/i3-dots/rofi-wifi-menu/rofi-wifi-menu.sh
 
 # start dmenu (a program launcher)
 ##bindsym $mod+d exec --no-startup-id dmenu_run
@@ -213,7 +217,7 @@ gaps outer 5
 
 for_window [class="^.*"] border pixel 2 
 
-exec_always "setxkbmap -model pc104 -layout us,ar -variant ,, -option grp:win_space_toggle"
+exec_always "setxkbmap -layout us,ara -variant ,, -option grp:win_space_toggle"
 
 exec_always "xset -dpms force off"
 

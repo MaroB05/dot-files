@@ -1,6 +1,6 @@
 #!bin/bash
 
-basics="git xinput i3 flatpak snap snapd rofi flameshot fzf eza"
+basics="git xinput i3 flatpak snap snapd rofi flameshot fzf eza palseaudio"
 apps="zoom "
 flatpak="app.zen_browser.zen "
 snap="nvim discord"

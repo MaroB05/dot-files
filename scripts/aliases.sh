@@ -1,14 +1,14 @@
 
-
 alias ls="eza --icons"
-alias nvim="alacritty --config-file=$HOME/.config/alacritty/nvim.yml -e nvim &"
+alias nvim="$HOME/i3-dots/scripts/run_nvim.sh"
+
 
 new_course(){
-mkdir $1
-cd $1
-mkdir assignments projects quzzies
-cd assignments
-mkdir problems solutions
-cd ../../
-echo "Happy suffering!"
+  mkdir $1
+  cd $1
+  mkdir assignments projects quzzies
+  cd assignments
+  mkdir problems solutions
+  cd ../../
+  echo "Happy suffering!"
 }

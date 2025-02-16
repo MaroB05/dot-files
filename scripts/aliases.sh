@@ -1,6 +1,7 @@
 
 
 alias ls="eza --icons"
+alias nvim="alacritty --config-file=$HOME/.config/alacritty/nvim.yml -e nvim &"
 
 new_course(){
 mkdir $1

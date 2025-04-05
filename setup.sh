@@ -1,7 +1,7 @@
 #!bin/bash
 
 basics="git xinput i3 flatpak snap snapd rofi flameshot fzf eza palseaudio"
-apps="zoom "
+apps="zoom ranger i3lock"
 flatpak="app.zen_browser.zen "
 snap="nvim discord"
 
@@ -39,4 +39,6 @@ echo "final check for updates"
 sudo apt-get update
 sudo apt-get upgrade
 
+echo "installing Java"
+sudo apt-get install $jav
 echo "basic setup is done!"

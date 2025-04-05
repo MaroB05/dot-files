@@ -54,7 +54,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec alacritty
-#bindsym $mod+l exec i3lock --color 36343F
+bindsym mod1+l exec i3lock --color 36343F
 # kill focused window
 bindsym $mod+shift+q kill
 
@@ -216,7 +216,7 @@ gaps outer 5
 
 for_window [class="^.*"] border pixel 2 
 
-exec_always "setxkbmap -layout us,ara -variant ,, -option grp:win_space_toggle"
+exec --no-startup-id $HOME/i3-dots/scripts/change_lang.sh
 
 exec_always "xset -dpms force off"
 
@@ -244,7 +244,7 @@ exec xinput set-prop "SYNA7DB5:01 06CB:CD41 Touchpad" "libinput Tapping Enabled"
 exec docker context use default
 bindsym mod1+d exec python3 -m http.server 8080 --bind 127.0.0.2 --dir $HOME/docs/ 
 #suspend after some time 
-exec --no-startup-id xautolock -time 12 -locker "systemctl suspend"
+# exec --no-startup-id xautolock -time 12 -locker "systemctl suspend"
 
 ########exec_always for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 0; done
 

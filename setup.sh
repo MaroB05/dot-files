@@ -2,7 +2,7 @@
 
 basics="git xinput i3 flatpak snap snapd rofi flameshot fzf eza palseaudio"
 apps="zoom ranger i3lock"
-flatpak="app.zen_browser.zen "
+flatpak="app.zen_browser.zen"
 snap="nvim discord"
 
 #python3

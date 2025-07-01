@@ -49,7 +49,7 @@ sudo mkdir -p ~/.local/share/fonts
 unzip JetBrainsMono.zip -d ~/.local/share/fonts
 
 echo "setting configs"
-mv i3 nvim polybar scripts picom rofi ~/.config/
+mv i3 nvim polybar picom rofi ~/.config/
 
 echo "Setup is almost done!"
 echo "Add \n \"source ~/dot-files/scripts/aliases.sh\" \n to your .bashrc"

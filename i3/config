@@ -244,7 +244,7 @@ exec xinput set-prop "SYNA7DB5:01 06CB:CD41 Touchpad" "libinput Tapping Enabled"
 exec docker context use default
 bindsym mod1+d exec python3 -m http.server 8080 --bind 127.0.0.2 --dir $HOME/docs/ 
 #suspend after some time 
-# exec --no-startup-id xautolock -time 12 -locker "systemctl suspend"
+exec --no-startup-id xautolock -time 12 -locker "systemctl suspend"
 
 ########exec_always for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 0; done
 

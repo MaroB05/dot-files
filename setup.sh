@@ -1,6 +1,6 @@
 #!bin/bash
 
-basics="git xinput i3-wm flatpak snap snapd rofi flameshot fzf eza pulseaudio"
+basics="git xinput i3-wm flatpak snap snapd rofi flameshot fzf eza pulseaudio picom"
 apps="zoom ranger i3lock"
 flatpak="app.zen_browser.zen"
 snap="nvim discord"
@@ -45,11 +45,12 @@ echo "basic setup is done!"
 
 echo "nvim setup"
 echo "Installing JetBrainsMono nerd font"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
 sudo mkdir -p ~/.local/share/fonts
 unzip JetBrainsMono.zip -d ~/.local/share/fonts
 
 echo "setting configs"
-mv i3 nvim polybar picom rofi ~/.config/
+cp -r i3 nvim polybar picom rofi ~/.config/
 
 echo "Setup is almost done!"
 echo "Add \n \"source ~/dot-files/scripts/aliases.sh\" \n to your .bashrc"

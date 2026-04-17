@@ -7,6 +7,13 @@ alias nvim="$HOME/i3-dots/scripts/run_nvim.sh"
 alias venv="python3 -m venv"
 alias activate="source env/bin/activate"
 
+update(){
+sudo nala update
+sudo nala upgrade -y
+sudo snap refresh
+sudo flatpak update -y
+}
+
 new_course(){
   mkdir $1
   cd $1
